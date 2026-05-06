@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.share-services</string>
+
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).ShareViewController</string>
+
+        <key>NSExtensionAttributes</key>
+        <dict>
+            <!-- Aparece en el share sheet cuando el item es una URL o texto plano -->
+            <key>NSExtensionActivationRule</key>
+            <string>
+                SUBQUERY(extensionItems, $item,
+                    SUBQUERY($item.attachments, $att,
+                        ANY $att.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url"
+                        OR ANY $att.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text"
+                    ).@count > 0
+                ).@count > 0
+            </string>
+        </dict>
+    </dict>
+
+    <key>CFBundleName</key>
+    <string>AcelinkHelper Share</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.acelinkhelper.ios.share</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundlePackageType</key>
+    <string>XPC!</string>
+
+</dict>
+</plist>
