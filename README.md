@@ -21,16 +21,34 @@ A native Swift app for iPhone, iPad, and Apple TV that intercepts `acestream://`
 - Converts the hash to an HTTP stream URL
 - Launches VLC for iOS/tvOS with the ready-to-play URL
 
-## Requirements
+## Prerequisites
 
-- Xcode 15+
-- iOS 16+ / tvOS 16+
-- [VLC for Mobile](https://apps.apple.com/app/vlc-media-player/id650377962) installed on the device
-- An AceStream engine accessible on the network
+| Requirement | Notes |
+|---|---|
+| **Xcode 15+** | Download from the [Mac App Store](https://apps.apple.com/app/xcode/id497799835) |
+| **Apple Developer account** | Free account works for personal device testing. Paid ($99/year) required for App Store distribution. Register at [developer.apple.com](https://developer.apple.com) |
+| **VLC for Mobile** | Install [VLC](https://apps.apple.com/app/vlc-media-player/id650377962) on the target device |
+| **AceStream engine** | Accessible on the local network (e.g. running [acestream-server](https://github.com/letzzar/acestream-server)) |
 
-## Build
+No API keys required.
 
-Open `AcelinkHelper.xcodeproj` in Xcode, select the desired scheme (AcelinkHelper, AcelinkHelperTV, or AcelinkHelperShare), and build.
+## Build & Run
+
+```bash
+git clone https://github.com/letzzar/acelinkhelper-ios.git
+cd acelinkhelper-ios
+open AcelinkHelper/AcelinkHelper.xcodeproj
+```
+
+In Xcode:
+
+1. Select the **AcelinkHelper** scheme (or AcelinkHelperTV for Apple TV)
+2. Go to **Signing & Capabilities** tab for each target
+3. Set your **Team** (select your Apple ID from the dropdown — Xcode creates a free provisioning profile automatically)
+4. Select your connected device or a simulator
+5. Press **⌘R** to build and run
+
+> **Note:** The `project.pbxproj` has `DEVELOPMENT_TEAM = ""` intentionally. You must set your own Team in Xcode before building.
 
 ## Usage
 
@@ -56,23 +74,41 @@ App nativa Swift para iPhone, iPad y Apple TV que intercepta URLs `acestream://`
 | **AcelinkHelperTV** | tvOS | Versión Apple TV |
 | **AcelinkHelperShare** | Extensión Share iOS | Permite compartir enlaces acestream desde Safari u otras apps |
 
-## Características
+## Requisitos previos
 
-- Gestiona URLs `acestream://` desde cualquier app vía Share Extension o esquema de URL
-- Se conecta a un motor AceStream configurable (local o remoto)
-- Convierte el hash en una URL de stream HTTP
-- Lanza VLC para iOS/tvOS con la URL lista para reproducir
+| Requisito | Notas |
+|---|---|
+| **Xcode 15+** | Descarga desde la [Mac App Store](https://apps.apple.com/app/xcode/id497799835) |
+| **Cuenta Apple Developer** | La cuenta gratuita funciona para pruebas en dispositivo propio. La de pago ($99/año) es necesaria para distribución en el App Store. Regístrate en [developer.apple.com](https://developer.apple.com) |
+| **VLC para móvil** | Instala [VLC](https://apps.apple.com/app/vlc-media-player/id650377962) en el dispositivo destino |
+| **Motor AceStream** | Accesible en la red local (p. ej. ejecutando [acestream-server](https://github.com/letzzar/acestream-server)) |
 
-## Requisitos
+No se necesitan claves API.
 
-- Xcode 15+
-- iOS 16+ / tvOS 16+
-- [VLC para móvil](https://apps.apple.com/app/vlc-media-player/id650377962) instalado en el dispositivo
-- Un motor AceStream accesible en la red
+## Compilar y ejecutar
 
-## Compilar
+```bash
+git clone https://github.com/letzzar/acelinkhelper-ios.git
+cd acelinkhelper-ios
+open AcelinkHelper/AcelinkHelper.xcodeproj
+```
 
-Abre `AcelinkHelper.xcodeproj` en Xcode, selecciona el scheme deseado y compila.
+En Xcode:
+
+1. Selecciona el scheme **AcelinkHelper** (o AcelinkHelperTV para Apple TV)
+2. Ve a la pestaña **Signing & Capabilities** de cada target
+3. Establece tu **Team** (selecciona tu Apple ID en el desplegable — Xcode crea un perfil de aprovisionamiento gratuito automáticamente)
+4. Selecciona tu dispositivo conectado o un simulador
+5. Pulsa **⌘R** para compilar y ejecutar
+
+> **Nota:** El `project.pbxproj` tiene `DEVELOPMENT_TEAM = ""` de forma intencionada. Debes establecer tu propio Team en Xcode antes de compilar.
+
+## Uso
+
+**Desde Safari / cualquier navegador:**
+1. Toca el botón Compartir en una página con un enlace `acestream://`
+2. Selecciona **AcelinkHelper** en la hoja de compartir
+3. VLC se abre y comienza la reproducción
 
 ## Licencia
 

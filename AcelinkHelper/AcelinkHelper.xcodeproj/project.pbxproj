@@ -1,4 +1,4 @@
-// !$*UTF8*$!
+﻿// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -256,7 +256,7 @@
 				CODE_SIGN_ENTITLEMENTS = AcelinkHelper/AcelinkHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -289,7 +289,7 @@
 				CODE_SIGN_ENTITLEMENTS = AcelinkHelper/AcelinkHelperRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -439,7 +439,7 @@
 				CODE_SIGN_ENTITLEMENTS = AcelinkHelperShare/AcelinkHelperShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AcelinkHelperShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -466,7 +466,7 @@
 				CODE_SIGN_ENTITLEMENTS = AcelinkHelperShare/AcelinkHelperShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AcelinkHelperShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -495,7 +495,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AcelinkHelperTV/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Acelinkhelper;
@@ -524,7 +524,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJXSYEN7PR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AcelinkHelperTV/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Acelinkhelper;
@@ -588,3 +588,4 @@
 	};
 	rootObject = 9E323CAE2FA5750E00634E1F /* Project object */;
 }
+
