@@ -1,0 +1,17 @@
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+Pods/
+.build/
+.DS_Store
+Thumbs.db
+.claude/
+**/.claude/
+CLAUDE.md
+*SESSION*.md
+*INSTRUCCIONES*.md
