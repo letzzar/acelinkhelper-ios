@@ -21,6 +21,15 @@ A native Swift app for iPhone, iPad, and Apple TV that intercepts `acestream://`
 - Converts the hash to an HTTP stream URL
 - Launches VLC for iOS/tvOS with the ready-to-play URL
 
+## Download
+
+Download the latest version from the [releases page](https://github.com/letzzar/acelinkhelper-ios/releases/latest). The IPAs are unsigned — install them by sideloading with [AltStore](https://altstore.io/), [Sideloadly](https://sideloadly.io/) or Xcode, which re-sign them with your Apple ID:
+
+| Platform | File |
+|---|---|
+| iPhone / iPad | [acelinkhelper-ios-v1.0.0-unsigned.ipa](https://github.com/letzzar/acelinkhelper-ios/releases/download/v1.0.0/acelinkhelper-ios-v1.0.0-unsigned.ipa) |
+| Apple TV | [acelinkhelper-tvos-v1.0.0-unsigned.ipa](https://github.com/letzzar/acelinkhelper-ios/releases/download/v1.0.0/acelinkhelper-tvos-v1.0.0-unsigned.ipa) |
+
 ## Server Setup (Docker)
 
 AcelinkHelper is designed to work with the AceStream engine running in **Docker** — typically on a home server, NAS, or any always-on machine on your network. The app on your iPhone or Apple TV simply connects to that address.
@@ -182,6 +191,15 @@ App nativa Swift para iPhone, iPad y Apple TV que intercepta URLs `acestream://`
 - Se conecta a un motor AceStream configurable (local o remoto)
 - Convierte el hash en una URL de stream HTTP
 - Lanza VLC para iOS/tvOS con la URL lista para reproducir
+
+## Descarga
+
+Descarga la última versión desde la [página de releases](https://github.com/letzzar/acelinkhelper-ios/releases/latest). Los IPA van sin firmar — instálalos por sideload con [AltStore](https://altstore.io/), [Sideloadly](https://sideloadly.io/) o Xcode, que los re-firman con tu Apple ID:
+
+| Plataforma | Archivo |
+|---|---|
+| iPhone / iPad | [acelinkhelper-ios-v1.0.0-unsigned.ipa](https://github.com/letzzar/acelinkhelper-ios/releases/download/v1.0.0/acelinkhelper-ios-v1.0.0-unsigned.ipa) |
+| Apple TV | [acelinkhelper-tvos-v1.0.0-unsigned.ipa](https://github.com/letzzar/acelinkhelper-ios/releases/download/v1.0.0/acelinkhelper-tvos-v1.0.0-unsigned.ipa) |
 
 ## Configuración del Servidor (Docker)
 
