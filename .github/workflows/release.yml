@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build iOS app (unsigned)
+        working-directory: AcelinkHelper
+        run: |
+          xcodebuild -project AcelinkHelper.xcodeproj -target AcelinkHelper \
+            -configuration Release -sdk iphoneos \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package iOS IPA
+        run: |
+          mkdir Payload
+          cp -R AcelinkHelper/build/Release-iphoneos/AcelinkHelper.app Payload/
+          zip -qry acelinkhelper-ios-${{ github.ref_name }}-unsigned.ipa Payload
+          rm -rf Payload
+
+      - name: Build tvOS app (unsigned)
+        working-directory: AcelinkHelper
+        run: |
+          xcodebuild -project AcelinkHelper.xcodeproj -target AcelinkHelperTV \
+            -configuration Release -sdk appletvos \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package tvOS IPA
+        run: |
+          mkdir Payload
+          cp -R AcelinkHelper/build/Release-appletvos/*.app Payload/
+          zip -qry acelinkhelper-tvos-${{ github.ref_name }}-unsigned.ipa Payload
+          rm -rf Payload
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            acelinkhelper-ios-${{ github.ref_name }}-unsigned.ipa
+            acelinkhelper-tvos-${{ github.ref_name }}-unsigned.ipa
+          name: AcelinkHelper iOS ${{ github.ref_name }}
+          generate_release_notes: true
